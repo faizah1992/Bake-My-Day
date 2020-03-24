@@ -4,8 +4,7 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       o.integer :customer_id
       o.integer :cupcake_id
       o.datetime :deliverytime
-      o.float :total 
-      o.string :name
+      o.float :total
     end
   end
 end

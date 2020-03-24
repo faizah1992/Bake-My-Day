@@ -1,3 +1,4 @@
 class Cupcake < ActiveRecord::Base
-    belongs_to :bakery
+    has_many :orders
+    has_many :customers, though::orders
 end
