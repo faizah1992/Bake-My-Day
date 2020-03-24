@@ -1,29 +1,26 @@
-# Airline -< Ticket >- Passenger
+# Cupcake -< Order >- Customer
 
-# User Stories:
-* User/Passenger will be able to browse ticket by airline
-    * Should be able to see the starting point
-    * Should be able to see the destination
+# Customer Stories:
+* Customer will be able to browse cupcakes through the app
+    * should be able to see the name of the cupcake
     * Should be able to see the price
-    * Should be able to see the date/time (duration)
-    * Should be able to see the seat number  
-* User/Passenger will be able to select a ticket for purchase
-* User/Passenger will be able to find their tickets using their name
+    * Should be able to see the flavor
+    * Should be able to see the calorie  
+* Customer will be able to select a cupcake for purchase
+* Customer will be able to see the confirmed order
 
 # MVP (Minimum Viable Product)
-* User/Passenger will be able to browse ticket by airline
-    * ~~Should be able to see the starting point~~
-    * ~~Should be able to see the destination~~
-    * ~~Should be able to see the price~~
-    * Should be able to see the date/time (duration)
-    * Should be able to see the seat number 
-* ~~User/Passenger will be able to select a ticket for purchase~~
-* ~~User/Passenger will be able to find their tickets using their name~~
+* Customer will be able to browse cupcakes through the app
+    * should be able to see the name of the cupcake
+    * Should be able to see the price
+    * Should be able to see the flavor
+    * Should be able to see the calorie  
+* Customer will be able to select a cupcake for purchase
+* Customer will be able to see the confirmed order
+
 
 # Stretch Goals
-* User/Passenger will be able to browse ticket by airline
-    * Should be able to see transfer information
-    * and class (first class, etc.)
+    * see if a cupcake is sold out 
 
 
 ### Steps

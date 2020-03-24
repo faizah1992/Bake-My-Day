@@ -14,14 +14,24 @@ ActiveRecord::Schema.define(version: 2020_03_24_165912) do
 
   create_table "cupcakes", force: :cascade do |t|
     t.string "name"
+    t.string "flavor"
+    t.float "price"
+    t.integer "calories"
   end
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
+    t.string "address"
+    t.integer "phone_number"
+    t.string "email_address"
   end
 
   create_table "orders", force: :cascade do |t|
     t.integer "customer_id"
+    t.integer "cupcake_id"
+    t.datetime "deliverytime"
+    t.float "total"
+    t.string "name"
   end
 
 end
