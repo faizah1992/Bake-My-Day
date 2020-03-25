@@ -30,7 +30,7 @@ if user_choice == "Place an Order"
         Cupcake.all.map{|cupcake| cupcake.name}
     )
     Cupcake.all.select{|cupcake| cupcake.name == user_choice}
-    
+
     puts "How many cupcakes would you like?"
         quanity = gets.chomp
  
