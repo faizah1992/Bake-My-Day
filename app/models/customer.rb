@@ -3,13 +3,14 @@ class Customer < ActiveRecord::Base
     has_many :cupcakes, through: :orders  
 
     def self.customer_info
-        puts "Enter your name"
+        puts "\nWhat is the name for the order?\n"
         name = gets.chomp
-        puts "Enter your address"
+        puts "\nEnter your address\n"
         address = gets.chomp
-        puts "Enter your phone number"
+        puts "\nEnter your phone number"
+        puts "Using this format ########## :"
         phone = gets.chomp
-        puts "Enter your email address"
+        puts "\nEnter your email address\n"
         email = gets.chomp
 
         Customer.create(name: name, address: address, phone_number: phone.to_i, email_address: email)

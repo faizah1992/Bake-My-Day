@@ -5,6 +5,11 @@ class Cupcake < ActiveRecord::Base
    
 end
 
+def browse_menu
+    Cupcake.all.map do |cupcake|
+        puts "#{cupcake.name}  :$#{cupcake.price}0"
+    end
+end
 
 
 

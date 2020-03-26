@@ -3,7 +3,7 @@ Customer.destroy_all
 Order.destroy_all
 
 c1 = Cupcake.create(name:"Oh my Godiva", flavor:"Chocolate",price: 7,calories: 400)
-c2 = Cupcake.create(name:"Ooey Gooey", flavor:"pbnj",price: 6.5,calories: 500)
+c2 = Cupcake.create(name:"Ooey Gooey", flavor:"pbnj",price: 6.50,calories: 500)
 c3 = Cupcake.create(name:"Strawberry", flavor:"Strawberry", price: 4,calories: 350)
 
 
