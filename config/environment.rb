@@ -8,5 +8,6 @@ ActiveRecord::Base.establish_connection(
 
 # Sqlite3.connect(':memory:')
 
+ActiveRecord::Base.logger = nil
 
 require_all 'app'

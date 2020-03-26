@@ -39,29 +39,67 @@ class Order < ActiveRecord::Base
 
 
     def self.receipt
-        name_arr=[]
-        self.cart.each do |c|
-        find_id = c.cupcake_id
-        name_arr << find_name =Cupcake.all.find_by(id: find_id).name
-       
+        # Customer Name
+        # Cupcake Name
+        # Cupcake Price
+        # Quantity
+        # Grand Total
+        # Thank Message
+        cust_id = self.cart[0].customer_id
+        customer_name = Customer.where(id: cust_id)[0].name
+
+
+        puts "===================="
+        puts "Thank you #{customer_name}"
+        puts "Your Order is:"
+        grand_total = 0
+        Order.cart.each do |order|
+            quantity = order.quantity
+            order_total = order.total
+            grand_total += order_total
+            cup_id = order.cupcake_id
+            cup_name = Cupcake.where(id: cup_id)[0].name
+
+            puts "#{cup_name} #{quantity}x"
+            puts "$#{order_total}"
+            puts "--------------- \n"
         end
-        name_arr[0]
+
+        puts "Grand Total is: #{grand_total}"
+
+
+
+
+
+
+
+
+
+
+
+        # name_arr=[]
+        # self.cart.each do |c|
+        # find_id = c.cupcake_id
+        # name_arr << find_name =Cupcake.all.find_by(id: find_id).name
+       
+        # end
+        # name_arr[0]
         
       
-        quantity_arr=[]
-        self.cart.each do |c|
-           quantity_arr << c.quantity   
-        end
-        quantity_arr[0]
+        # quantity_arr=[]
+        # self.cart.each do |c|
+        #    quantity_arr << c.quantity   
+        # end
+        # quantity_arr[0]
         
      
-        total = 0 
-        self.cart.each do |c|
-            total += c.total 
-        end
-        total
-        puts "Your order : #{name_arr} QTY: #{quantity_arr}"
-        puts "Total #{total}"
+        # total = 0 
+        # self.cart.each do |c|
+        #     total += c.total 
+        # end
+        # total
+        # puts "Your order : #{name_arr} QTY: #{quantity_arr}"
+        # puts "Total #{total}"
     end
 
      

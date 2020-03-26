@@ -28,10 +28,12 @@ def start_app
     ])
         if user_choice == "Yes"
             Order.cart << Order.another_order(current_customer)
+            #prompt here to ask again
             Order.receipt
         end
 
         if user_choice == "No"
+            Order.receipt
             puts "Thanks for coming! Goodbye"
         end
 
