@@ -5,6 +5,7 @@ class CreateCupcakes < ActiveRecord::Migration[5.2]
       c.string :flavor
       c.float :price
       c.integer :calories
+      
     end
   end
 end

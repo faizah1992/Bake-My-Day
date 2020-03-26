@@ -5,6 +5,7 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       o.integer :cupcake_id
       o.string :deliverytime
       o.float :total
+      o.integer :quantity
     end
   end
 end
