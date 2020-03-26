@@ -21,7 +21,8 @@ def start_app
         puts "How many of #{selected_cupcake_name} do you want?"
         quantity = gets.chomp.to_i
         current_customer = Customer.customer_info
-        Order.cart << Order.fill_out_order(selected_cupcake_object,current_customer,quantity)
+        deliverytime = Order.get_delivery_time
+        Order.cart << Order.fill_out_order(selected_cupcake_object,current_customer,deliverytime,quantity)
         user_choice = prompt.select("Would you like to place another order?",[
         "Yes",
         "No"

@@ -13,12 +13,10 @@ class Order < ActiveRecord::Base
         "Your order will be delivered on #{date} at #{time}."
     end
 
-    def self.total(cupcake)
-        cupcake.price
-    end
-
-    def self.fill_out_order(cupcake,customer,quantity)
-        Order.create(customer_id: customer.id, cupcake_id: cupcake.id,deliverytime: self.get_delivery_time, quantity: quantity, total: self.total(cupcake)*quantity)
+    def self.fill_out_order(cupcake,customer,deliverytime,quantity)
+        
+        Order.create(customer_id: customer.id, cupcake_id: cupcake.id,deliverytime: deliverytime, quantity: quantity, total: (cupcake.price)*quantity)
+    
     end
 
     def self.another_order(current_customer)
@@ -30,7 +28,7 @@ class Order < ActiveRecord::Base
         selected_cupcake_object = Cupcake.all.find_by(name: selected_cupcake_name)
         puts "How many of #{selected_cupcake_name} do you want?"
         quantity = gets.chomp.to_i
-        Order.fill_out_order(selected_cupcake_object,current_customer,quantity)
+        Order.fill_out_order(selected_cupcake_object,current_customer,deliverytime,quantity)
     end
 
     def self.cart
