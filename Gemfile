@@ -10,5 +10,5 @@ gem 'pry'
 gem "artii", "~> 2.1"
 
 gem "tty-prompt", "~> 0.21.0"
-
+gem 'lolcat', '~> 100.0'
 gem 'colorize', '~> 0.8.1'
