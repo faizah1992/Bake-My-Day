@@ -3,14 +3,38 @@ class Customer < ActiveRecord::Base
     has_many :cupcakes, through: :orders  
 
     def self.customer_info
-        puts "Enter your name"
+        
+        puts "\nWhat is the name for the order?"
         name = gets.chomp
-        puts "Enter your address"
+        while name == ""
+            puts "Please enter a valid name".colorize(:red)
+            name = gets.chomp
+        end
+            
+    
+        puts "\nEnter your address".colorize(:light_magenta)
         address = gets.chomp
-        puts "Enter your phone number"
+        
+        while address == ""
+            puts "Please enter a valid address".colorize(:red)
+            address = gets.chomp
+        end
+        
+        puts "\nEnter your phone number"
+        puts "Using this format ##########".colorize(:light_blue)
         phone = gets.chomp
-        puts "Enter your email address"
+        
+        while (phone.length != 10 || phone.to_i == 0)
+            puts "Please enter a valid number. Using this format: ##########".colorize(:red)
+            phone = gets.chomp
+        end
+            
+        puts "\nEnter your email address".colorize(:light_magenta)
         email = gets.chomp
+        while email == ""
+            puts "Please enter a valid email address".colorize(:red)
+            email = gets.chomp
+        end
 
         Customer.create(name: name, address: address, phone_number: phone.to_i, email_address: email)
     end 

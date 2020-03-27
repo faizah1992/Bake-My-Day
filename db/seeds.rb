@@ -3,8 +3,11 @@ Customer.destroy_all
 Order.destroy_all
 
 c1 = Cupcake.create(name:"Oh my Godiva", flavor:"Chocolate",price: 7,calories: 400)
-c2 = Cupcake.create(name:"Ooey Gooey", flavor:"pbnj",price: 6.5,calories: 500)
+c2 = Cupcake.create(name:"Ooey Gooey", flavor:"pbnj",price: 6.50,calories: 500)
 c3 = Cupcake.create(name:"Strawberry", flavor:"Strawberry", price: 4,calories: 350)
+c4 = Cupcake.create(name:"Oh so traditional", flavor: "Vanilla", price: 3.5, calories: 250)
+c5 = Cupcake.create(name:"Best of both worlds", flavor: "Marble", price: 8, calories: 450)
+
 
 
 cus1 = Customer.create(name: "Josh", address: "123 main strees", phone_number: 123456, email_address: "josh@gmail.com")
