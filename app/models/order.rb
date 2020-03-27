@@ -74,23 +74,15 @@ class Order < ActiveRecord::Base
 
         puts "Grand Total is: $#{grand_total}0\n"
         if grand_total >= 1000 && grand_total < 1000000
-            puts "WOW! THAT'S A BIG ORDER"
+            puts "\nWOW! THAT'S A BIG ORDER".colorize(:yellow)
         elsif grand_total >= 1000000 && grand_total< 9000000000
-            puts "I don't think we have enough supplies for this order, but we'll try..."
+            puts "I don't think we have enough supplies for this order, but we'll try...".colorize(:yes)
         elsif grand_total >= 90000000000
-            puts "...you must want everyone in the world to have a cupcake."
+            puts "...you must want everyone in the world to have a cupcake.".colorize(:yellow)
         end
         
         puts cart[0].deliverytime
     end
-
-     
-
-
- 
- 
-   
-
 
 end
 
